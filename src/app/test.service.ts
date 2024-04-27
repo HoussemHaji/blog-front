@@ -8,7 +8,7 @@ import { catchError, Observable, throwError } from 'rxjs';
 export class TestService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'http://backend-service.default.svc.cluster.local';
   getData(): Observable<any> {
     return this.http.get<String>(`${this.baseUrl}/test`);
   }
